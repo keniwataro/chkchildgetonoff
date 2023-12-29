@@ -213,6 +213,7 @@ return [
         'lesson' => 'レッスン',
         'line_address_1' => '回線アドレス1',
         'line_address_2' => '回線アドレス2',
+        'login_id' => 'ログインID',
         'message' => 'メッセージ',
         'middle_name' => 'ミドルネーム',
         'minute' => '分',
