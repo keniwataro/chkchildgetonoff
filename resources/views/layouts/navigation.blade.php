@@ -16,6 +16,9 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <p>{{ \Carbon\Carbon::now()->locale('ja_JP')->isoFormat('Y年M月D日（dd）') }}</p>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
