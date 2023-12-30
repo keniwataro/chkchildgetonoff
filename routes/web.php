@@ -32,6 +32,11 @@ Route::get('/test-buttons', function () {
     return view('test-buttons');
 });
 
+//送迎場所テスト
+Route::get('/editplace', function () {
+    return view('editplace');
+});
+
 
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
