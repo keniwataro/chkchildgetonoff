@@ -27,6 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//ボタンテスト
+Route::get('/test-buttons', function () {
+    return view('test-buttons');
+});
+
 
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
