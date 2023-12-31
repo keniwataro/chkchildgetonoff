@@ -1,9 +1,12 @@
 <x-app-layout>
 <header>
     <div>送迎場所を編集</div>
-    <div>場所名</div><input type="text">
-    <x-buttons.register-button>登録</x-buttons.register-button>
-    
+    <div class="">
+        <div>場所名</div>
+        <input type="text">
+        <x-buttons.register-button>登録</x-buttons.register-button>
+    </div>
+
     {{-- ファイルの読み込み部分 --}}
     <div>ファイル読み込み</div>
     <div>
