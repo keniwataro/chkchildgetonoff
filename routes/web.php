@@ -42,7 +42,10 @@ Route::get('/editchild', function () {
     return view('editchild');
 });
 
-
+//バス利用確認テスト
+Route::get('/registerbususer', function () {
+    return view('registerbususer');
+});
 
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
