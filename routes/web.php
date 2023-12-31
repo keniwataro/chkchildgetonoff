@@ -42,6 +42,8 @@ Route::get('/editchild', function () {
     return view('editchild');
 });
 
+
+
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
 require __DIR__.'/auth.php';
