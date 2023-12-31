@@ -10,10 +10,12 @@
 <x-frame.name-frame>にしだ　あかり</x-frame.name-frame>
 <x-frame.etc-frame>2023/12/30</x-frame.etc-frame>
 <x-frame.etc-frame>A地点</x-frame.etc-frame>
+<x-frame.etc-frame>バス1</x-frame.etc-frame>
 <x-frame.head-frame>なまえ</x-frame.head-frame>
 <x-frame.head-frame>誕生日</x-frame.head-frame>
 <x-frame.head-frame>送迎場所</x-frame.head-frame>
-
+<x-frame.head-frame>バス利用有無</x-frame.head-frame>
+<x-frame.head-frame>バス名</x-frame.head-frame>
 
 <div class="w-30">
 <x-buttons.getoff-button getonoff="おりる！">
@@ -26,4 +28,7 @@
     やあ！
 </x-buttons.geton-button>
 </div>
+
+<x-buttons.status-button>行き/帰り</x-buttons.status-button>
+ 
 </x-app-layout>
