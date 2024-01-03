@@ -1,13 +1,13 @@
 <style>
-    body {
+    /* body {
       font-family: 'Roboto Condensed', sans-serif;
       /* background: none; */
-      font-weight: 700;
-      text-transform: uppercase;
+      /* font-weight: 700;
+      text-transform: uppercase; */
       /* color: white; */
       /* width: 600px;
       height: 1000px; */
-    }
+    
   
     .wrap {
       position: absolute;
@@ -56,7 +56,9 @@
       overflow: hidden;
       text-align: center;
       line-height: 94px;
-      font-size: 22px;
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
       width: 240px;
       white-space: nowrap;
       opacity: 1;
@@ -181,8 +183,8 @@
   .bubble {
     z-index: 2;
     position: absolute;
-    top: -100px;
-    right: -100px;
+    top: -40px;
+    right: -20px;
     width: 0px;
     height: 0px;
     border-radius: 50px 50px 50px 0;
@@ -199,11 +201,11 @@
     position: absolute;
     top: -80px;
     right: -80px;
-    width: 150px;
+    width: 160px;
     height: 70px;
     border-radius: 50px 50px 50px 0;
     color: #f18bc8;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     line-height: 70px;
     background: white;
@@ -233,7 +235,7 @@
       <div class="right-eye"></div>
     </div>
     <div class="smile"></div>
-    <div class="sign">{{ $getonoff }}</div>
+    <div class="sign">{{ $getonoff }} </div>
   </div>
 </div>
 
