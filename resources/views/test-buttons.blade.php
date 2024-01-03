@@ -30,5 +30,5 @@
 </div>
 
 <x-buttons.status-button>行き/帰り</x-buttons.status-button>
- 
+
 </x-app-layout>

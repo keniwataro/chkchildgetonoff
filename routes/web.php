@@ -52,6 +52,10 @@ Route::get('/listallgetoff-to', function () {
     return view('listallgetoff-to');
 });
 
+//園児側乗降者確認画面テスト
+Route::get('/chkgetoff-to', function () {
+    return view('chkgetoff-to');
+});
 
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
