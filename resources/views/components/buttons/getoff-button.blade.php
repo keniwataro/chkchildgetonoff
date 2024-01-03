@@ -189,6 +189,7 @@
     height: 0px;
     border-radius: 50px 50px 50px 0;
     color: transparent;
+    font-weight: bold;
     font-size: 20px;
     text-align: right;
     line-height: 100px;
