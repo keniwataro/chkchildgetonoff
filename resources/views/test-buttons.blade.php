@@ -4,7 +4,7 @@
 <x-buttons.change-page-button>行き</x-buttons.change-page-button>
 <x-buttons.change-page-button>帰り</x-buttons.change-page-button>
 <x-buttons.next-button></x-buttons.next-button>
-
+<x-buttons.chkgetoff-button>降車確認</x-buttons.chkgetoff-button>
 
 
 <x-frame.name-frame>にしだ　あかり</x-frame.name-frame>

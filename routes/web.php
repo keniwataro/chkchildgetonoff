@@ -47,6 +47,12 @@ Route::get('/registerbususer', function () {
     return view('registerbususer');
 });
 
+//送迎場所園児一覧確認テスト
+Route::get('/listallgetoff-to', function () {
+    return view('listallgetoff-to');
+});
+
+
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
 require __DIR__.'/auth.php';
