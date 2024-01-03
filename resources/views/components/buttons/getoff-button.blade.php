@@ -1,10 +1,10 @@
 <style>
     body {
       font-family: 'Roboto Condensed', sans-serif;
-      background: #ddf1f4;
+      /* background: none; */
       font-weight: 700;
       text-transform: uppercase;
-      color: white;
+      /* color: white; */
       /* width: 600px;
       height: 1000px; */
     }
@@ -197,6 +197,21 @@
   .bbl {
     z-index: 2;
     position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 150px;
+    height: 70px;
+    border-radius: 50px 50px 50px 0;
+    color: #f18bc8;
+    font-size: 20px;
+    text-align: center;
+    line-height: 70px;
+    background: white;
+  }
+
+  /* .bbl {
+    z-index: 2;
+    position: absolute;
     top: -100px;
     right: -200px;
     width: 200px;
@@ -207,7 +222,7 @@
     text-align: center;
     line-height: 100px;
     background: white;
-  }
+  } */
 </style>
 
 <div class="wrap">

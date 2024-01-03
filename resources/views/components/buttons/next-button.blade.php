@@ -9,6 +9,6 @@
     }
 </style>
     
-    <a href="#" class="border-solid border-y-25 border-l-70 border-r-0 border-y-transparent border-l-pink-400 border-r-transparent inline-block"></a>
+    {{-- <a href="#" class="border-solid border-y-25 border-l-70 border-r-0 border-y-transparent border-l-pink-400 border-r-transparent inline-block"></a> --}}
     <a href="#" class="triangle-right"></a>
 
