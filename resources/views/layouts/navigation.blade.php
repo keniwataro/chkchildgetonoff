@@ -3,10 +3,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
                 <!-- Logo -->
-                <div class="w-52 shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                <div class="sm:w-52 shrink-0 flex items-center">
+                    <a href="{{ route('dashboard') }}" >
                         <x-application-logo class="inline-block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                        乗降車確認アプリ
+                        <span class="hidden sm:inline">乗降車確認アプリ</span>
                     </a>
                     
                 </div>
@@ -17,7 +17,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div> --}}
-                <div class=" space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class=" space-x-8 -my-px ms-10 flex">
                     <p class="flex items-center">{{ \Carbon\Carbon::now()->locale('ja_JP')->isoFormat('Y年M月D日（dd）') }}</p>
                 </div>
                 
