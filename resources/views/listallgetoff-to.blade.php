@@ -5,7 +5,7 @@
     </header></br>
 
     <div class="text-center">
-        <x-buttons.chkgetoff-button>降車確認</x-buttons.chkgetoff-button>
+        <x-buttons.chkgetoff-button id="chkgetoff-to">降車確認</x-buttons.chkgetoff-button>
     </div>
 
     <div class="text-center text-xl font-bold">
@@ -16,6 +16,14 @@
             <div class="m-6 w-8 h-8 bg-red-500 rounded-full"></div>
         <div class="flex items-center" >
             <p class="text-xl font-bold">にしだ　あかり</p>
-        </div>            
+        </div>
     </div>
+
+    <script>
+        document.getElementById('chkgetoff-to').addEventListener('click',()=>{
+            window.location.href = "{{ url('chkgetoff-to') }}";
+        })
+    </script>
+
+
 </x-layout.mobile>
