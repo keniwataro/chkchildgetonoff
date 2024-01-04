@@ -60,7 +60,6 @@ Route::get('/chkgetoff-to-last', function () {
     return view('chkgetoff-to-last');
 });
 
-<<<<<<< HEAD
 
 //11_園児側乗降車確認画面-最後の園児　テスト
 Route::get('/chkgeton-to-last', function () {
@@ -73,8 +72,6 @@ Route::get('/chkgeton-to', function () {
 });
 
 
-=======
->>>>>>> 6e34a1c (DBのいろいろOK！　途中（どっちやねん！！）)
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
 require __DIR__.'/auth.php';
