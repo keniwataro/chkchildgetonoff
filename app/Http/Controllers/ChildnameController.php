@@ -16,6 +16,12 @@ class ChildnameController extends Controller
         return view('editchild',['children' => $children] );
     }
 
+    public function index_mobile()
+    {
+        $children = Childname::with('Getonoffplaces')->get();
+        return view('listallgeton-to',['children' => $children] );
+    }
+
     /**
      * Show the form for creating a new resource.
      */
