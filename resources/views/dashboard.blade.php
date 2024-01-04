@@ -32,7 +32,7 @@
                     乗降車確認
                 </div>
                 <div class=" text-center p-2 text-gray-900 dark:text-gray-100">
-                    <x-buttons.change-page-button class="mt-8 sm:mt-2" id="listallgetoff-to">行き</x-buttons.change-page-button>
+                    <x-buttons.change-page-button class="mt-8 sm:mt-2" id="listallgeton-to">行き</x-buttons.change-page-button>
                     <x-buttons.change-page-button class="mt-20 sm:mt-2 mb-16 sm:mb-0">帰り</x-buttons.change-page-button>
                 </div>
             </div>
@@ -67,8 +67,8 @@
             window.location.href = "{{ url('editplace') }}";
         })
 
-        document.getElementById('listallgetoff-to').addEventListener('click',()=>{
-            window.location.href = "{{ url('listallgetoff-to') }}";
+        document.getElementById('listallgeton-to').addEventListener('click',()=>{
+            window.location.href = "{{ url('listallgeton-to') }}";
         })
 
     </script>
