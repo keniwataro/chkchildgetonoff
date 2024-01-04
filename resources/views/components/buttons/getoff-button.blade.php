@@ -211,7 +211,6 @@
     line-height: 70px;
     background: white;
   }
-
   /* .bbl {
     z-index: 2;
     position: absolute;
