@@ -11,8 +11,8 @@
   
     .wrap2 {
       position: absolute;
-      top: 70%;
-      left: 20%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
     }
   
@@ -56,7 +56,9 @@
       overflow: hidden;
       text-align: center;
       line-height: 94px;
-      font-size: 22px;
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
       width: 240px;
       white-space: nowrap;
       opacity: 1;
@@ -181,12 +183,13 @@
   .bubble2 {
     z-index: 2;
     position: absolute;
-    top: -100px;
-    right: -100px;
+    top: -40px;
+    right: -20px;
     width: 0px;
     height: 0px;
     border-radius: 50px 50px 50px 0;
     color: transparent;
+    font-weight: bold;
     font-size: 20px;
     text-align: right;
     line-height: 100px;
@@ -195,6 +198,20 @@
   }
 
   .bbl2 {
+    z-index: 2;
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 160px;
+    height: 70px;
+    border-radius: 50px 50px 50px 0;
+    color: #f18bc8;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    background: white;
+  }
+  /* .bbl2 {
     z-index: 2;
     position: absolute;
     top: -100px;
@@ -207,7 +224,8 @@
     text-align: center;
     line-height: 100px;
     background: white;
-  }
+  } */
+
 </style>
 
 <div class="wrap2">

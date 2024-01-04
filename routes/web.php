@@ -67,6 +67,12 @@ Route::get('/chkgeton-to-last', function () {
     return view('chkgeton-to-last');
 });
 
+//9_chkgeton_to_園児側乗降車確認画面　テスト
+Route::get('/chkgeton-to', function () {
+    return view('chkgeton-to');
+});
+
+
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
 require __DIR__.'/auth.php';
