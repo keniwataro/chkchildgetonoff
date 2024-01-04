@@ -5,9 +5,9 @@
             <form action="#" method="post" class="flex">
                 <table>
                     <tr>
-                        <th><x-frame.head-frame>なまえ</x-frame.head-frame></th>
-                        <th><x-frame.head-frame>誕生日</x-frame.head-frame></th>
-                        <th><x-frame.head-frame>送迎場所</x-frame.head-frame></th>
+                        <td><x-frame.head-frame>なまえ</x-frame.head-frame></td>
+                        <td><x-frame.head-frame>誕生日</x-frame.head-frame></td>
+                        <td><x-frame.head-frame>送迎場所</x-frame.head-frame></td>
                     </tr>
                     <tr>
                         <td><x-frame.name-frame>テスト太郎</x-frame.name-frame></td>
@@ -37,20 +37,33 @@
             <table>
                 <tr>
                     <th></th>
-                    <th><x-frame.head-frame>なまえ</x-frame.head-frame></th>
-                    <th><x-frame.head-frame>誕生日</x-frame.head-frame></th>
-                    <th><x-frame.head-frame>送迎場所</x-frame.head-frame></th>
+                    <td><x-frame.head-frame>なまえ</x-frame.head-frame></td>
+                    <td><x-frame.head-frame>誕生日</x-frame.head-frame></td>
+                    <td><x-frame.head-frame>送迎場所</x-frame.head-frame></td>
                     <th></th>
                     <th></th>
                 </tr>
-                <tr>
-                    <td><input type="checkbox" /></td>
-                    <td><x-frame.name-frame>にしだ　あかり</x-frame.name-frame></td>
-                    <td><x-frame.etc-frame>2023/12/30</x-frame.etc-frame></td>
-                    <td><x-frame.etc-frame>A地点</x-frame.etc-frame></td>
-                    <td><x-buttons.edit-button>編集</x-buttons.edit-button></td>
-                    <td><x-buttons.edit-button>削除</x-buttons.edit-button></td>
+
+                @foreach ($children as $child)
+                <tr >
+                    <th><input type="checkbox"/></th>
+                    <td id="name{{ $child['id'] }}"><x-frame.name-frame >{{ $child['child_name'] }}</x-frame.name-frame></td>
+                    <td id="edtname{{ $child['id'] }}" class="hidden"><input type="text" value="{{ $child['child_name'] }}"></td>
+                    <td><x-frame.etc-frame >{{ \Carbon\Carbon::parse($child['birthday'])->isoFormat('Y年M月D日') }}</x-frame.etc-frame></td>
+                    <td><x-frame.etc-frame >{{ $child->getonoffplaces['place_name'] }}</x-frame.etc-frame></td>
+                    <th style="width: 70px"><x-buttons.edit-button id="editbtn">編集</x-buttons.edit-button></th>
+                    <th><x-buttons.edit-button>削除</x-buttons.edit-button></th>
                 </tr>
+                @endforeach
+
+
+                <style>
+                    td{
+                        width: 200px;
+                        height: 50px;
+                    }
+                </style>
+
             </table>
         </form>
     </div>

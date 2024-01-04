@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Getonbus extends Model
 {
     use HasFactory;
+
+    protected $table = 'getonbuss';
+
 }

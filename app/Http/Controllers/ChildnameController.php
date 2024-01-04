@@ -12,7 +12,8 @@ class ChildnameController extends Controller
      */
     public function index()
     {
-        //
+        $children = Childname::with('Getonoffplaces')->get();
+        return view('editchild',['children' => $children] );
     }
 
     /**
