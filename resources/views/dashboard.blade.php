@@ -19,7 +19,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class=" text-center p-2 text-gray-900 dark:text-gray-100">
-                    <x-buttons.change-page-button>バス利用確認</x-buttons.change-page-button>
+                        <x-buttons.change-page-button id="registerbususer">バス利用確認</x-buttons.change-page-button>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                     乗降車確認
                 </div>
                 <div class=" text-center p-2 text-gray-900 dark:text-gray-100">
-                    <x-buttons.change-page-button class="mt-8 sm:mt-2">行き</x-buttons.change-page-button>
+                    <x-buttons.change-page-button class="mt-8 sm:mt-2" id="listallgetoff-to">行き</x-buttons.change-page-button>
                     <x-buttons.change-page-button class="mt-20 sm:mt-2 mb-16 sm:mb-0">帰り</x-buttons.change-page-button>
                 </div>
             </div>
@@ -46,15 +46,32 @@
                     登録
                 </div>
                 <div class=" text-center p-2 text-gray-900 dark:text-gray-100">
-                    <x-buttons.change-page-button>園児</x-buttons.change-page-button>
-                    <x-buttons.change-page-button>送迎場所</x-buttons.change-page-button>
+                    <x-buttons.change-page-button id="editchild">園児</x-buttons.change-page-button>
+                    <x-buttons.change-page-button id="editplace">送迎場所</x-buttons.change-page-button>
                 </div>
             </div>
         </div>
     </div>
 
 
+    <script>
+        document.getElementById('registerbususer').addEventListener('click',()=>{
+            window.location.href = "{{ url('registerbususer') }}";
+        })
 
+        document.getElementById('editchild').addEventListener('click',()=>{
+            window.location.href = "{{ url('editchild') }}";
+        })
+
+        document.getElementById('editplace').addEventListener('click',()=>{
+            window.location.href = "{{ url('editplace') }}";
+        })
+
+        document.getElementById('listallgetoff-to').addEventListener('click',()=>{
+            window.location.href = "{{ url('listallgetoff-to') }}";
+        })
+
+    </script>
 
 
     {{-- <div class="py-2">
