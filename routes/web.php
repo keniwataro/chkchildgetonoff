@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GetonoffplaceController;
 use App\Http\Controllers\ChildnameController;
+use App\Models\Childname;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,9 +57,7 @@ Route::get('/chkgetoff-to', function () {
 });
 
 //園児側乗降者確認画面テスト
-Route::get('/listallgeton-to', function () {
-    return view('listallgeton-to');
-});
+Route::get('/listallgeton-to', [ChildnameController::class, 'index_mobile']);
 
 
 //園児側乗降者確認画面　最後の園児テスト
