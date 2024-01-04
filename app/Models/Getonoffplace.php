@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Getonoffplace extends Model
 {
     use HasFactory;
+
+    protected $table = 'getonoffplaces';
+
+    public function childnames()
+    {
+        return $this->hasMany(Childname::class, 'place_id');
+    }
 }

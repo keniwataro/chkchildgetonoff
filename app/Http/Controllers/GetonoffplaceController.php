@@ -12,7 +12,10 @@ class GetonoffplaceController extends Controller
      */
     public function index()
     {
-        //
+        $places = Getonoffplace::orderBy('id', 'asc')->get();
+
+
+        return view('editplace',['places' => $places] );
     }
 
     /**

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GetonoffplaceController;
+use App\Http\Controllers\ChildnameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,14 +35,10 @@ Route::get('/test-buttons', function () {
 });
 
 //送迎場所テスト
-Route::get('/editplace', function () {
-    return view('editplace');
-});
+Route::get('/editplace', [GetonoffplaceController::class,'index']);
 
 //園児登録テスト
-Route::get('/editchild', function () {
-    return view('editchild');
-});
+Route::get('/editchild',[ChildnameController::class,'index']);
 
 //バス利用確認テスト
 Route::get('/registerbususer', function () {
@@ -57,10 +55,11 @@ Route::get('/chkgetoff-to', function () {
     return view('chkgetoff-to');
 });
 
-//7_園児側乗降者確認画面　最後の園児テスト
+//園児側乗降者確認画面　最後の園児テスト
 Route::get('/chkgetoff-to-last', function () {
     return view('chkgetoff-to-last');
 });
+
 
 //11_園児側乗降車確認画面-最後の園児　テスト
 Route::get('/chkgeton-to-last', function () {

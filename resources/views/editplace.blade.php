@@ -16,10 +16,12 @@
                 <input type="submit" value="読み込む">
             </form>
         </div>
-
-
     </header>
-    1<x-frame.editplace-frame>test</x-frame.editplace-frame>
 
+    @foreach ($places as $place)
+    <div class="ml-4">
+        {{ $place['id'] }}<x-frame.editplace-frame>{{ $place['place_name'] }}</x-frame.editplace-frame>
+    </div>
+    @endforeach
 
 </x-app-layout>
