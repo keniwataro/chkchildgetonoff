@@ -55,6 +55,12 @@ Route::get('/chkgetoff-to', function () {
     return view('chkgetoff-to');
 });
 
+//園児側乗降者確認画面テスト
+Route::get('/listallgeton-to', function () {
+    return view('listallgeton-to');
+});
+
+
 //園児側乗降者確認画面　最後の園児テスト
 Route::get('/chkgetoff-to-last', function () {
     return view('chkgetoff-to-last');

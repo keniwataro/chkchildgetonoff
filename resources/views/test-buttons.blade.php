@@ -5,7 +5,8 @@
 <x-buttons.change-page-button>帰り</x-buttons.change-page-button>
 <x-buttons.next-button></x-buttons.next-button>
 <x-buttons.chkgetoff-button>降車確認</x-buttons.chkgetoff-button>
-
+<x-buttons.home-button>ホーム</x-buttons.home-button>
+<x-buttons.changeedit-button>変更</x-buttons.changeedit-button>
 
 <x-frame.name-frame>にしだ　あかり</x-frame.name-frame>
 <x-frame.etc-frame>2023/12/30</x-frame.etc-frame>
