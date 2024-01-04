@@ -9,9 +9,9 @@
     </div>
 
         <div class="flex justify-center">
-            <div class="btn font-bold text-3xl text-white">
+            <button class="btn font-bold text-3xl text-white">
                     一覧にもどる
-            </div>
+            </button>
         </div>
 
     <style>
