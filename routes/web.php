@@ -57,9 +57,14 @@ Route::get('/chkgetoff-to', function () {
     return view('chkgetoff-to');
 });
 
-//園児側乗降者確認画面　最後の園児テスト
+//7_園児側乗降者確認画面　最後の園児テスト
 Route::get('/chkgetoff-to-last', function () {
     return view('chkgetoff-to-last');
+});
+
+//11_園児側乗降車確認画面-最後の園児　テスト
+Route::get('/chkgeton-to-last', function () {
+    return view('chkgeton-to-last');
 });
 
 //  このファイル(web.php)があるディレクトリ(routes)内の
