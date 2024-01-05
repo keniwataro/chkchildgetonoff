@@ -24,6 +24,19 @@ class ChildnameController extends Controller
         return view('listallgeton-to',['children' => $children] );
     }
 
+    public function index_mobile2()
+    {
+        $children = Childname::with('Getonoffplaces')->get();
+        return view('listallgetoff-to',['children' => $children] );
+    }
+
+    public function index_mobile3($child_order)
+    {
+        $children = Childname::get();
+        return view('chkgetoff-to',['children' => $children,'child_order' => $child_order] );
+
+    }
+
     public function index_check($place_id,$child_order)
     {
         $place = Getonoffplace::find($place_id);

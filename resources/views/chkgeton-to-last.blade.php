@@ -8,12 +8,13 @@
         <div class="text-3xl font-bold">みんなのったよ！</div>
     </div>
 
-    <button class="mx-auto btn mb-4 font-bold text-3xl text-white">
+    <button id="nextplace" class="mx-auto btn mb-4 font-bold text-3xl text-white">
             次の場所へ行く
     </button>
-    <button class="mx-auto btn font-bold text-3xl text-white">
+    {{-- 必要だったら復活 --}}
+    {{-- <button class="mx-auto btn font-bold text-3xl text-white">
         一覧表示
-    </button>
+    </button> --}}
 
 
     <style>
@@ -31,4 +32,19 @@
         align-items: center;
         }
     </style>
+
+<script>
+    @if ($place_id == $cnt_place)
+        document.getElementById('nextplace').addEventListener('click',()=>{
+            window.location.href = "{{ url('/listallgetoff-to') }}";
+        })
+
+    @else
+        document.getElementById('nextplace').addEventListener('click',()=>{
+            window.location.href = "{{ url('listgeton-to-place/'.($place_id+1)) }}";
+        })
+
+    @endif
+
+</script>
 </x-layout.mobile>

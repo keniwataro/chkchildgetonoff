@@ -27,6 +27,15 @@ class GetonoffplaceController extends Controller
 
         return view('listgeton-to-place',['place' => $place, 'children' => $children, 'cnt_place' => $cnt_place] );
     }
+    
+    public function nomore_place($place_id)
+    {
+        $cnt_place = Getonoffplace::count();
+
+        return view('chkgeton-to-last',['place_id' => $place_id,'cnt_place' => $cnt_place]);
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */
