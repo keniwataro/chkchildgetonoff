@@ -76,6 +76,8 @@ Route::get('/chkgeton-to', function () {
     return view('chkgeton-to');
 });
 
+//9_chkgeton_to_園児側乗降車確認画面　テスト
+Route::get('/listgeton-to-place/{place_id}', [GetonoffplaceController::class,'index_place']);
 
 //  このファイル(web.php)があるディレクトリ(routes)内の
 //  auth.phpを読み込む処理
