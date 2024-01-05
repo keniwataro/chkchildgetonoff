@@ -42,7 +42,7 @@
 
     <script>
         document.getElementById('chkgeton').addEventListener('click',()=>{
-            window.location.href = "{{ url('chkgeton-to') }}";
+            window.location.href = "{{ url('chkgeton-to/'.$place['id'].'/0')}}";
         })
     </script>
 </x-layout.mobile>
