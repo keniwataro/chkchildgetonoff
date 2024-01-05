@@ -72,9 +72,7 @@ Route::get('/chkgeton-to-last', function () {
 });
 
 //9_chkgeton_to_園児側乗降車確認画面　テスト
-Route::get('/chkgeton-to', function () {
-    return view('chkgeton-to');
-});
+Route::get('/chkgeton-to/{place_id}/{child_order}', [ChildnameController::class,'index_check']);
 
 //9_chkgeton_to_園児側乗降車確認画面　テスト
 Route::get('/listgeton-to-place/{place_id}', [GetonoffplaceController::class,'index_place']);
