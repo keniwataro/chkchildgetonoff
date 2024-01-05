@@ -35,7 +35,6 @@
         <div class="m-6 w-8 h-8 bg-red-500 rounded-full"></div>
         <div class="flex items-center">
             <p class="text-xl font-bold">{{$item['child_name']}}</p>
-            <p class="text-xl font-bold">{{$item->Getonoffplaces['place_name']}}</p>
         </div>
     </div>        
     @endforeach

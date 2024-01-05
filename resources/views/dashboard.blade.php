@@ -26,7 +26,7 @@
     </div>
 
     <div class="py-2 ">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="sm:hidden max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="pt-16 sm:pt-0 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="text-center text-xl">
                     乗降車確認
