@@ -47,14 +47,10 @@ Route::get('/registerbususer', function () {
 });
 
 //送迎場所園児一覧確認テスト
-Route::get('/listallgetoff-to', function () {
-    return view('listallgetoff-to');
-});
+Route::get('/listallgetoff-to',[ChildnameController::class, 'index_mobile2']);
 
 //園児側乗降者確認画面テスト
-Route::get('/chkgetoff-to', function () {
-    return view('chkgetoff-to');
-});
+Route::get('/chkgetoff-to/{child_order}', [ChildnameController::class, 'index_mobile3']);
 
 //園児側乗降者確認画面テスト
 Route::get('/listallgeton-to', [ChildnameController::class, 'index_mobile']);
@@ -67,9 +63,7 @@ Route::get('/chkgetoff-to-last', function () {
 
 
 //11_園児側乗降車確認画面-最後の園児　テスト
-Route::get('/chkgeton-to-last', function () {
-    return view('chkgeton-to-last');
-});
+Route::get('/chkgeton-to-last/{place_id}', [GetonoffplaceController::class,'nomore_place']);
 
 //9_chkgeton_to_園児側乗降車確認画面　テスト
 Route::get('/chkgeton-to/{place_id}/{child_order}', [ChildnameController::class,'index_check']);

@@ -4,7 +4,7 @@
         <x-buttons.back-button ></x-buttons.back-button>
             {{ ($child_order +1).' / '.count($children) }}
             @if (($child_order +1) == count($children))
-            <x-buttons.next-button>{{ url('chkgeton-to-last') }}</x-buttons.next-button>
+            <x-buttons.next-button>{{ url('chkgeton-to-last/'.$children[0]['place_id']) }}</x-buttons.next-button>
             @else
             <x-buttons.next-button>{{ url('chkgeton-to/'.$children[0]['place_id'].'/'.($child_order +1)) }}</x-buttons.next-button>
             @endif

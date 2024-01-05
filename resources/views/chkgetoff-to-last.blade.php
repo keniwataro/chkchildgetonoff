@@ -9,8 +9,8 @@
     </div>
 
         <div class="flex justify-center">
-            <button class="btn font-bold text-3xl text-white">
-                    一覧にもどる
+            <button id="back_home" class="btn font-bold text-3xl text-white">
+                    ホームにもどる
             </button>
         </div>
 
@@ -29,4 +29,11 @@
         align-items: center;
         }
     </style>
+
+<script>
+    document.getElementById('back_home').addEventListener('click',()=>{
+        window.location.href = "{{ url('/') }}";
+    })
+</script>
+
 </x-layout.mobile>
