@@ -6,6 +6,7 @@
                 <div class="sm:w-52 shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" >
                         <x-application-logo class="inline-block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                            {{-- <img src="{{ asset('img/bus.png')}}" alt=""> --}}
                         <span class="hidden sm:inline">乗降車確認アプリ</span>
                     </a>
                     
