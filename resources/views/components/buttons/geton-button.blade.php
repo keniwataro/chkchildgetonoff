@@ -238,11 +238,20 @@
     <div class="smile2"></div>
     <div class="sign2">{{ $getonoff }}</div>
   </div>
+
+  <audio id="audioPlayer" controls class="hidden">
+    <source id="audioSource" type="audio/mp4">
+  </audio>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
   $("#geton-btn").click(function () {
+
+        let audioPlayer = $('#audioPlayer');
+        $("#audioSource").attr('src',"{{ asset('audio/greet.m4a') }}");
+        audioPlayer[0].load();
+        audioPlayer[0].play();
 
         $(".sign2").delay(300).addClass("sgn-anim2");
         $(".smile2").addClass("smile-animation2");
