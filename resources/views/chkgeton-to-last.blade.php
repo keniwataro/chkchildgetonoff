@@ -9,7 +9,13 @@
     </div>
 
     <button id="nextplace" class="mx-auto btn mb-4 font-bold text-3xl text-white">
-            乗車園児一覧
+
+    @if ($place_id == $cnt_place)
+        乗車園児一覧
+    @else
+        次の場所へ
+    @endif
+
     </button>
     {{-- 必要だったら復活 --}}
     {{-- <button class="mx-auto btn font-bold text-3xl text-white">
@@ -34,6 +40,7 @@
     </style>
 
 <script>
+
     @if ($place_id == $cnt_place)
         document.getElementById('nextplace').addEventListener('click',()=>{
             window.location.href = "{{ url('/listallgetoff-to') }}";
