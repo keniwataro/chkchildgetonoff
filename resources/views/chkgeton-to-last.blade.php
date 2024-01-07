@@ -1,7 +1,7 @@
 <x-layout.mobile>
 
     <header class="flex justify-start pt-4 pl-4">
-        <x-buttons.back-button ></x-buttons.back-button>
+        {{-- <x-buttons.back-button ></x-buttons.back-button> --}}
     </header></br></br></br>
 
     <div class="h-36 text-center">
@@ -9,7 +9,7 @@
     </div>
 
     <button id="nextplace" class="mx-auto btn mb-4 font-bold text-3xl text-white">
-            次の場所へ行く
+            乗車園児一覧
     </button>
     {{-- 必要だったら復活 --}}
     {{-- <button class="mx-auto btn font-bold text-3xl text-white">
