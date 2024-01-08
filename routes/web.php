@@ -37,6 +37,8 @@ Route::get('/test-buttons', function () {
 
 //送迎場所テスト
 Route::get('/editplace', [GetonoffplaceController::class,'index']);
+Route::post('/editplace', [GetonoffplaceController::class,'store']);
+Route::delete('/editplace/{getonoffplace}',[GetonoffplaceController::class,'destroy']);
 
 //園児登録テスト
 Route::get('/editchild',[ChildnameController::class,'index']);
