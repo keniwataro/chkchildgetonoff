@@ -249,7 +249,15 @@
   $("#geton-btn").click(function () {
 
         let audioPlayer = $('#audioPlayer');
-        $("#audioSource").attr('src',"{{ asset('audio/greet.m4a') }}");
+        @php
+          $audios = [
+            'audio/iwa_greet.m4a',
+            'audio/aka_greet.m4a',
+            'audio/tomo_greet.m4a',
+            'audio/satomi_greet.m4a'
+          ];
+        @endphp
+        $("#audioSource").attr('src',"{{ asset($audios[rand(0,3)]) }}");
         audioPlayer[0].load();
         audioPlayer[0].play();
 

@@ -248,7 +248,15 @@
   $("#getoff-btn").click(function () {
 
         let audioPlayer = $('#audioPlayer');
-        $("#audioSource").attr('src',"{{ asset('audio/bye.m4a') }}");
+        @php
+          $audios = [
+            'audio/iwa_bye.m4a',
+            'audio/aka_bye.m4a',
+            'audio/tomo_bye.m4a',
+            'audio/satomi_bye.m4a'
+          ];
+        @endphp
+        $("#audioSource").attr('src',"{{ asset($audios[rand(0,3)]) }}");
         audioPlayer[0].load();
         audioPlayer[0].play();
 
