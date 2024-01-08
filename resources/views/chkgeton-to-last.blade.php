@@ -12,11 +12,15 @@
 
     @if ($place_id == $cnt_place)
         乗車園児一覧
+    </button>
+    <img src="{{ asset('img/3.png') }}" alt="">
     @else
         次の場所へ
+    </button>
+    <img src="{{ asset('img/1.png') }}" alt="">
     @endif
 
-    </button>
+
     {{-- 必要だったら復活 --}}
     {{-- <button class="mx-auto btn font-bold text-3xl text-white">
         一覧表示
