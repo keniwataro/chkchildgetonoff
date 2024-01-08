@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Childname;
 use App\Models\Getonoffplace;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class GetonoffplaceController extends Controller
 {
@@ -49,7 +50,24 @@ class GetonoffplaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //バリデーション
+        $validator = Validator::make($request->all(),[
+            'addplace'=> 'required |max:30'
+        ]);
+
+        //バリデーションエラー
+        if($validator->fails()) {
+            return redirect('editplace')
+                ->withInput()
+                ->withErrors($validator);
+        }
+
+        //Eloqunetモデル
+        $place = new Getonoffplace;
+        $place -> place_name = $request->addplace;
+        $place->save();
+        return redirect('editplace')->with('message','登録しました');
+
     }
 
     /**
@@ -81,6 +99,7 @@ class GetonoffplaceController extends Controller
      */
     public function destroy(Getonoffplace $getonoffplace)
     {
-        //
+        $getonoffplace->delete();
+        return redirect('editplace');
     }
 }

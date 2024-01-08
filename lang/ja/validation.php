@@ -3,7 +3,6 @@
 return [
 
     /* メッセージの内容がご自身のアプリに適さない場合には、必要に応じて修正願います */
-
     'accepted' => ':attributeを承認してください。',
     'accepted_if' => ':otherが:valueの場合、:attributeを承認してください。',
     'active_url' => ':attributeが有効なURLではありません。',
@@ -181,6 +180,7 @@ return [
     */
 
     'attributes' => [
+        'addplace' => '登録場所',
         'address' => '住所',
         'age' => '歳',
         'amount' => '額',

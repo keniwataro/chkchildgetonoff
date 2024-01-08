@@ -11,7 +11,7 @@
             </div>
 
             <div>
-                <form action="{{ url('/') }}" method="POST">
+                <form action="{{ url('editplace/'.$delid) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <x-buttons.edit-button>削除</x-buttons.edit-button>
