@@ -12,23 +12,27 @@ class GetonoffplaceController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    // 送迎場所テーブルからIDの昇順で取得して送迎場所編集画面を表示
     public function index()
     {
         $places = Getonoffplace::orderBy('id', 'asc')->get();
 
-
         return view('editplace',['places' => $places] );
     }
 
+    // 送迎場所テーブルと園児テーブルから情報を取得して地点の乗車園児一覧画面を表示
     public function index_place($place_id)
     {
-        $place = Getonoffplace::find($place_id);
-        $children = Childname::with('Getonoffplaces')->where('place_id',$place_id)->get();
-        $cnt_place = Getonoffplace::count();
+        $place      = Getonoffplace::find($place_id);
+        $children   = Childname::with('Getonoffplaces')->where('place_id',$place_id)->get();
+        $cnt_place  = Getonoffplace::count();
 
         return view('listgeton-to-place',['place' => $place, 'children' => $children, 'cnt_place' => $cnt_place] );
     }
     
+
+    // 送迎場所の数を取得して、全員乗った後の画面を表示
     public function nomore_place($place_id)
     {
         $cnt_place = Getonoffplace::count();
@@ -63,8 +67,8 @@ class GetonoffplaceController extends Controller
         }
 
         //Eloqunetモデル
-        $place = new Getonoffplace;
-        $place -> place_name = $request->addplace;
+        $place             = new Getonoffplace;
+        $place->place_name = $request->addplace;
         $place->save();
         return redirect('editplace')->with('message','登録しました');
 

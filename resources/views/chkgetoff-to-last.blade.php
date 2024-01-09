@@ -1,10 +1,10 @@
 <x-layout.mobile>
 
     <header class="flex justify-start pt-4 pl-4">
-        <x-buttons.back-button ></x-buttons.back-button>
-    </header></br></br></br>
+        {{-- <x-buttons.back-button ></x-buttons.back-button> --}}
+    </header></br></br>
 
-    <div class="h-36 text-center">
+    <div class="h-20 text-center">
         <div class="text-3xl font-bold">みんなおりたよ！</div>
     </div>
 

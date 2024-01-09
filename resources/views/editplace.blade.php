@@ -33,7 +33,7 @@
 
     @foreach ($places as $place)
     <div class="ml-4">
-        {{ $place['id'] }}<x-frame.editplace-frame delid="{{  $place['id'] }}">{{ $place['place_name'] }}</x-frame.editplace-frame>
+        {{ $place['id'] }}<x-frame.editplace-frame edtid="{{  $place['id'] }}">{{ $place['place_name'] }}</x-frame.editplace-frame>
     </div>
     @endforeach
 
