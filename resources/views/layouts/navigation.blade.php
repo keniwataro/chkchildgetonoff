@@ -7,7 +7,7 @@
                     <a href="{{ route('dashboard') }}" >
                         <x-application-logo class="inline-block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                             {{-- <img src="{{ asset('img/bus.png')}}" alt=""> --}}
-                        <span class="hidden sm:inline">乗降車確認アプリ</span>
+                        <span class="hidden sm:inline">{{ config('app.name') }}</span>
                     </a>
                     
                 </div>
