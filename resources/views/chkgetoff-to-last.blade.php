@@ -12,6 +12,10 @@
             <button id="back_home" class="btn font-bold text-3xl text-white">
                     ホームにもどる
             </button>
+            
+        </div>
+        <div class="mt-10 mx-5">
+            <img src="{{ asset('img/oritayo.png') }}">
         </div>
 
     <style>
