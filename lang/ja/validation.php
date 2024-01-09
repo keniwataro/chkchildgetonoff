@@ -180,6 +180,7 @@ return [
     */
 
     'attributes' => [
+        'adddate' => '誕生日',
         'addplace' => '登録場所',
         'address' => '住所',
         'age' => '歳',
@@ -188,6 +189,7 @@ return [
         'available' => '利用可能',
         'birthday' => '誕生日',
         'body' => '本文',
+        'child_name' => '園児名',
         'city' => '市',
         'content' => 'コンテンツ',
         'country' => '国',

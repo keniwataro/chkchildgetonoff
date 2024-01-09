@@ -1,11 +1,11 @@
-<button id="changeButton" class="bg-blue-500 text-white py-2 px-4 rounded-md">
+<button id="{{ 'changeButton'.$cldid }}" class="bg-blue-500 text-white py-2 px-4 rounded-md">
     行き/帰り
+</button>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
     // ボタンとテキストの要素を取得
-    const changeButton = document.getElementById('changeButton');
-    const displayText = document.getElementById('displayText');
+    const changeButton = document.getElementById("{{ 'changeButton'.$cldid }}");
 
     // 現在のシンボルを格納する変数
     let currentSymbol = '行き/帰り';
@@ -33,8 +33,6 @@
         // ボタンのテキストを変更
         changeButton.innerText = currentSymbol;
 
-        // テキストを変更
-        displayText.innerText = 'Current symbol: ' + currentSymbol;
     });
 });
 

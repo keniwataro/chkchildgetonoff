@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Checkuser;
 use Illuminate\Http\Request;
+use App\Models\Childname;
+use App\Models\Getonoffplace;
+
 
 class CheckuserController extends Controller
 {
@@ -12,7 +15,8 @@ class CheckuserController extends Controller
      */
     public function index()
     {
-        //
+        $children = Childname::with('Getonoffplaces')->get();
+        return view('registerbususer',['children' => $children] );
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Childname;
 use Illuminate\Http\Request;
 use App\Models\Getonoffplace;
+use Illuminate\Support\Facades\Validator;
 
 
 class ChildnameController extends Controller
@@ -12,24 +13,29 @@ class ChildnameController extends Controller
     /**
      * Display a listing of the resource.
      */
+    // childnameテーブルの情報を取得して園児登録画面を表示
     public function index()
     {
-        $children = Childname::with('Getonoffplaces')->get();
-        return view('editchild',['children' => $children] );
+        $places     = Getonoffplace::get();
+        $children   = Childname::with('Getonoffplaces')->get();
+        return view('editchild',['children' => $children , 'places' => $places] );
     }
 
+    // childnameテーブルの情報を取得して乗車園児一覧画面を表示
     public function index_mobile()
     {
         $children = Childname::with('Getonoffplaces')->get();
         return view('listallgeton-to',['children' => $children] );
     }
 
+    // childnameテーブルの情報を取得して降車園児一覧画面を表示
     public function index_mobile2()
     {
         $children = Childname::with('Getonoffplaces')->get();
         return view('listallgetoff-to',['children' => $children] );
     }
 
+    // childnameテーブルの情報を取得して降車園児確認画面を表示
     public function index_mobile3($child_order)
     {
         $children = Childname::get();
@@ -37,13 +43,15 @@ class ChildnameController extends Controller
 
     }
 
+    // 指定された送迎場所の情報とその場所の園児の情報を取得して乗車確認画面を表示
     public function index_check($place_id,$child_order)
     {
-        $place = Getonoffplace::find($place_id);
-        $children = Childname::with('Getonoffplaces')->where('place_id',$place_id)->get();
+        $place      = Getonoffplace::find($place_id);
+        $children   = Childname::with('Getonoffplaces')->where('place_id',$place_id)->get();
         return view('chkgeton-to',['children' => $children,'place' => $place,'child_order' => $child_order] );
     }
 
+    
 
     /**
      * Show the form for creating a new resource.
@@ -58,7 +66,27 @@ class ChildnameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //バリデーション
+        $validator = Validator::make($request->all(),[
+            'child_name'   => ['required', 'string', 'max:255','unique:'.Childname::class],
+            'adddate'   => 'required',
+            'addplace'  => 'required'
+        ]);
+
+        //バリデーションエラー
+        if($validator->fails()) {
+            return redirect('editchild')
+                ->withInput()
+                ->withErrors($validator);
+        }
+
+        //Eloqunetモデル
+        $child             = new Childname;
+        $child->child_name = $request->child_name;
+        $child->birthday   = $request->adddate;
+        $child->place_id   = $request->addplace;
+        $child->save();
+        return redirect('editchild')->with('message','登録しました');
     }
 
     /**
@@ -90,6 +118,7 @@ class ChildnameController extends Controller
      */
     public function destroy(Childname $childname)
     {
-        //
+        $childname->delete();
+        return redirect('editchild');
     }
 }
